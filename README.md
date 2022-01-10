@@ -31,3 +31,7 @@
 > URLs can be accessed by their name, which can be defined in the path itself
 
 > URLs from other apps can be used with the help of `include`, e.g. `path('', include('base.urls'))`
+
+> Use template inheritance to include pieces of code in other pages, e.g. a Navbar is typically rendered as a part  of all pages, so instead of re-writing the code for it, we can simply inherit it
+
+> Django templating is similar to Jinja2, which is used for templating in Flask

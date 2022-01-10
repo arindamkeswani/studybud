@@ -14,6 +14,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#This set the path of the project back to the directory of the project. This enables us to access any file/folder in the entire project
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -56,7 +58,9 @@ ROOT_URLCONF = 'studybud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
