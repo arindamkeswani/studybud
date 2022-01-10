@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'base.apps.BaseConfig' #Connecting the app inside base folder that we created
+    'base.apps.BaseConfig' #Connecting the app inside base folder that we created. Now Django knows about our app
 ]
 
 MIDDLEWARE = [
