@@ -1,0 +1,12 @@
+>Commands used (Powershell)
+- python --version
+- pip install virtualenv
+- Set-ExecutionPolicy Unrestricted -Force
+- virtualenv env
+- env\scripts\activate
+- pip install django
+- django-admin
+- django-admin startproject studybud
+- cd studybud
+- python manage.py runserver
+- python manage.py startapp base
