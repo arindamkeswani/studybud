@@ -13,6 +13,9 @@
 - cd studybud
 - python manage.py runserver
 - python manage.py startapp base
+- python manage.py migrate (running server would not give unapplied migrations error anymore)
+- python manage.py makemigrations (followed by python manage.py migrate)
+- python manage.py createsuperuser
 
 ## Notes
 
@@ -40,3 +43,17 @@
 
 > Instead of specifying a path inside `href`, we can use names (that have been specified in urls) for links using url tag. 
 Sample syntax: `<a href="{% url 'room' room.id %}">{{room.name}}</a>`
+
+### Database & Admin Panel
+
+> We have some apps made by Django by default, which have databases of their own. They can be viewed in `settings.py` (INSTALLED_APPS list). So we have some tables prepared by Django that are ready to be migrated
+
+> Django Admin Panel lets us view our database, as well as perform CRUD operations on the tables
+
+> In the python class used for creating DB, the `null` parameter is `False` by default. Setting it to `True` would mean that that particular instance of the model can have the target field as blank. `blank` parameter is used for forms, for options similar to required fields
+
+> `auto_now=True` means that we want to note down the time at an instance of a model of the database was last updated. This is built-in in Django
+
+> `auto_now_add=True` notes down the timestamp of data creation
+
+> `on_delete=models.CASCADE` on a foreign key will delete the element if its parent is deleted. If a room is deleted, the messages of that room will also be deleted
