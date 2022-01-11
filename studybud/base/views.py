@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Room
+from .forms import RoomForm
 # Create your views here.
 
 # rooms = [
@@ -21,3 +22,17 @@ def room(request, pk):
     
     context = {'room': room}
     return render(request, 'base/room.html',context)
+
+
+def createRoom(request):
+    form = RoomForm()
+    if request.method=='POST':
+        # print(request.POST) #Prints a dictionary of form data sent by the user in a post request
+        form=RoomForm(request.POST) #Specifying the values that the form needs to extract
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+
+
+    context={'form':form}
+    return render(request, 'base/room_form.html',context)

@@ -57,3 +57,7 @@ Sample syntax: `<a href="{% url 'room' room.id %}">{{room.name}}</a>`
 > `auto_now_add=True` notes down the timestamp of data creation
 
 > `on_delete=models.CASCADE` on a foreign key will delete the element if its parent is deleted. If a room is deleted, the messages of that room will also be deleted
+
+### CRUD
+
+> If we do not specify action inside a form, it will send the data to the current URL 
