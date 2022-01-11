@@ -35,3 +35,8 @@
 > Use template inheritance to include pieces of code in other pages, e.g. a Navbar is typically rendered as a part  of all pages, so instead of re-writing the code for it, we can simply inherit it
 
 > Django templating is similar to Jinja2, which is used for templating in Flask
+
+> One can create app-specific templates (i.e. templates that are not needed throughout the project) by creating a templates folder inside the app, followed by another folder inside this templates folder, which has the same name as the app name
+
+> Instead of specifying a path inside `href`, we can use names (that have been specified in urls) for links using url tag. 
+Sample syntax: `<a href="{% url 'room' room.id %}">{{room.name}}</a>`
