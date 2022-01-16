@@ -58,6 +58,14 @@ Sample syntax: `<a href="{% url 'room' room.id %}">{{room.name}}</a>`
 
 > `on_delete=models.CASCADE` on a foreign key will delete the element if its parent is deleted. If a room is deleted, the messages of that room will also be deleted
 
+> `admin.site.register(ModelName)` will register the model so that it can be viewed in the admin panel
+
 ### CRUD
 
 > If we do not specify action inside a form, it will send the data to the current URL 
+
+> `{{form.as_p}}` wraps the form data in the paragraph tag
+
+> To pre-fill a form, you may follow this syntax: `form = SomeForm(instance=some_data)` 
+
+> Setting `href="{{request.META.HTTP_REFERER}}"` inside a link in your template will send the user back to where they came from

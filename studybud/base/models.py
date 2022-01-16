@@ -20,6 +20,7 @@ class Room(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
+    #display contents in DESC order or 1. updation of Room data, 2. creation of Room
     class Meta:
         ordering = ['-updated','-created']
 
