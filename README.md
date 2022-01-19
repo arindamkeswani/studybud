@@ -69,3 +69,13 @@ Sample syntax: `<a href="{% url 'room' room.id %}">{{room.name}}</a>`
 > To pre-fill a form, you may follow this syntax: `form = SomeForm(instance=some_data)` 
 
 > Setting `href="{{request.META.HTTP_REFERER}}"` inside a link in your template will send the user back to where they came from
+
+### Search
+
+> To pass query parameters inside the anchor tag, you may use the following syntax: `<a href="{% url 'some_page' %}?q={{parameter_to_be_passed}}">{{display_text}}</a>`
+
+> `filter()` method returns all the results if no parameter is passed to it
+
+>  To refer to a schema using a foreign key (i.e. a parent schema), use double-underscore, e.g. `rooms = Room.objects.filter(topic__name=q)`
+
+>
