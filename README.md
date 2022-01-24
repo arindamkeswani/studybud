@@ -83,3 +83,7 @@ Sample syntax: `<a href="{% url 'room' room.id %}">{{room.name}}</a>`
 > The `login_required` decorator acts like a middleware function that prevents a user from visiting certain pages without logging in. Syntax: `@login_required(login_required='/login')`
 
 > `request.user.is_authenticated` checks whether a user is logged in or not
+
+### User registration
+
+> `commit=False` enables us to acces the form data without saving it into the database
